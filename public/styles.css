@@ -1,0 +1,88 @@
+/*.home-container-text { outline: 2px solid red; }
+.home-container-body img { outline: 2px solid blue; }*/
+
+
+.home-container-body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; /* prevents space-between behavior */
+  gap: 8px;
+  margin: 0; /* remove the extra spacing here */
+}
+
+.home-container-text {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 600px;
+  width: fit-content;
+  flex: 0 1 auto;         /* ← add this so it doesn’t expand */
+  color: #848684;
+  font-family: Verdana, sans-serif;
+
+  font-size: 19px;      /* base body text */
+  line-height: 1.2;     /* improves readability */
+}
+
+.home-container-text p,
+.home-container-text ul {
+  margin: 0;
+}
+
+.home-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px auto 88px auto;
+    width: fit-content;
+    color: #848684;
+    font-family: Verdana, sans-serif;
+}
+
+.home-header-icon {
+    width: 42px;
+    height: auto;
+}
+
+.home-container {
+  max-width: 1200px;
+  display: flex;
+  gap: 16px;
+  margin: 22px auto 24px; /* bottom margin closer to divider */
+  width: fit-content;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.corner-logos {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    /* width: 60px; */
+    display: flex;
+    gap: 16px;
+}
+
+.corner-logos img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.divider {
+  height: 1px;
+  background-color: #848684;
+  width: 80%;
+  margin: 54px auto;  /* controls space above AND below the line */
+}
+
+.video-section {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.video-section iframe {
+  width: 55%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+}
