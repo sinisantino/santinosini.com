@@ -1,3 +1,6 @@
+<!-- Logo is eclipse eye -->
+<!-- Photo is black t-shirt -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +15,7 @@
     </div>
 
     <div class="corner-logos">
+        <button id="open-login">Log In</button>
         <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
             <img src="youtube-logo.png" alt="YouTube Link.">
         </a>
@@ -26,23 +30,45 @@
     <div class="home-container">
         <div class="home-container-body">
             <div class="home-container-text">
-                <p>Hi,</p> 
-                <p>My name is Santino Salvatore Sini, known to friends as Santino. I'm a writer based out of Denver, Colorado.</p>
-                <p> I also make videos about literature, software and related topics on my YouTube channel and TikTok.</p>
-                <p> To ensure I'm not talking out of my ass, I follow these golden rules:</p>
-                <ul>
-                    <li>Use only academic sources for my videos</li>
-                    <li>Share those sources with the viewers</li>
-                    <li> Make it obvious when I'm just giving my personal opinion</li>
-                </ul>
-                <p> Just a lover of literature, trying to bring more art into the world.</p>
-                <p>
-                    If you have an idea for a video, would like to share your research or be interviewed, contact me.</p>
+                <p>Welcome,</p> 
+                <p>I'm Santino, a writer based out of Denver, Colorado.</p> 
+                <p>My books focus on the intersection of thoughts and lived experience. I also make videos about literature, software and related topics on my YouTube channel and TikTok.</p>
+                <p> This website serves as a landing page for those interests. If you would like to follow me, please visit my socials found at the header / footer.</p>
+                <p> Log in / make an account to receive email updates and hear more from me. Thank you for stopping by,</p>
+                <p>Santino</p>
+
+                <p> Contact me (email).</p>
             </div>       
-            <img src="biopic.jpg" width="350px" alt="A picture of the author is shown.">
+            <img src="biopic.jpg" class="biopic" alt="A picture of the author.">
         </div>
     </div>
 
+    <div id="login-modal" class="modal hidden">
+
+        <div class="login-box">
+
+            <button id="close-login" class="close-login">&times;</button>
+
+            <div class="login-container">
+
+                <div class="login-inputs">
+                    <input id="email" type="email" placeholder="Email">
+                    <input id="password" type="password" placeholder="Password">
+                </div>
+
+                <div class="login-buttons">
+                    <button id="login">Log In</button>
+                    <button id="signup">Create Account</button>
+                    <button id="google">Continue with Google</button>
+                </div>
+
+            </div>
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
 
     <div class="divider"></div>
 
@@ -54,5 +80,17 @@
             allowfullscreen>
         </iframe>
     </div>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.instagram.com/santsorry" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a>
+        </div>
+    </footer>
+
 </body>
+
+<script type="module" src="login.js"></script>
+
 </html>
