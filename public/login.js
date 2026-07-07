@@ -61,6 +61,42 @@ document.getElementById("login").onclick = async () => {
   }
 };
 
+emailjs.init({
+    publicKey: "YOUR_PUBLIC_KEY"
+});
+
+const openContact = document.getElementById("open-contact");
+const closeContact = document.getElementById("close-contact");
+const contactModal = document.getElementById("contact-modal");
+const contactForm = document.getElementById("contact-form");
+const contactStatus = document.getElementById("contact-status");
+
+openContact.addEventListener("click", (event) => {
+    event.preventDefault();
+    contactModal.classList.remove("hidden");
+});
+
+closeContact.addEventListener("click", () => {
+    contactModal.classList.add("hidden");
+});
+
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    contactStatus.textContent = "Sending...";
+
+    emailjs.sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        this
+    ).then(() => {
+        contactStatus.textContent = "Message sent. Thank you!";
+        contactForm.reset();
+    }).catch(() => {
+        contactStatus.textContent = "Something went wrong. Please try again.";
+    });
+});
+
 document.getElementById("google").onclick = async () => {
   const provider = new GoogleAuthProvider();
   await signInWithPopup(auth, provider);
